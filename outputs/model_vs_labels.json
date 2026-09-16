@@ -1,0 +1,138 @@
+[
+  {
+    "image": "train_01",
+    "oks": 0.863
+  },
+  {
+    "image": "train_01",
+    "oks": 0.863
+  },
+  {
+    "image": "train_02",
+    "oks": 0.883
+  },
+  {
+    "image": "train_03",
+    "oks": 0.986
+  },
+  {
+    "image": "train_03",
+    "oks": 0.871
+  },
+  {
+    "image": "train_03",
+    "oks": 0.814
+  },
+  {
+    "image": "train_03 (số người lệch)",
+    "oks": "model 4 / bạn 3"
+  },
+  {
+    "image": "train_04",
+    "oks": 0.816
+  },
+  {
+    "image": "train_04",
+    "oks": 0.726
+  },
+  {
+    "image": "train_05",
+    "oks": 0.956
+  },
+  {
+    "image": "train_06",
+    "oks": 0.727
+  },
+  {
+    "image": "train_07",
+    "oks": 0.879
+  },
+  {
+    "image": "train_08",
+    "oks": 0.983
+  },
+  {
+    "image": "train_09",
+    "oks": 0.922
+  },
+  {
+    "image": "train_10",
+    "oks": 0.718
+  },
+  {
+    "image": "train_10 (số người lệch)",
+    "oks": "model 2 / bạn 1"
+  },
+  {
+    "image": "train_11",
+    "oks": 0.72
+  },
+  {
+    "image": "train_12",
+    "oks": 0.849
+  },
+  {
+    "image": "train_13",
+    "oks": 0.874
+  },
+  {
+    "image": "train_13",
+    "oks": 0.84
+  },
+  {
+    "image": "train_13",
+    "oks": 0.84
+  },
+  {
+    "image": "train_14",
+    "oks": 0.819
+  },
+  {
+    "image": "train_14",
+    "oks": 0.774
+  },
+  {
+    "image": "train_15",
+    "oks": 0.93
+  },
+  {
+    "image": "train_15",
+    "oks": 0.813
+  },
+  {
+    "image": "train_15 (số người lệch)",
+    "oks": "model 2 / bạn 3"
+  },
+  {
+    "image": "train_16",
+    "oks": 0.866
+  },
+  {
+    "image": "train_16",
+    "oks": 0.864
+  },
+  {
+    "image": "train_17",
+    "oks": 0.995
+  },
+  {
+    "image": "train_17 (số người lệch)",
+    "oks": "model 1 / bạn 2"
+  },
+  {
+    "image": "train_18",
+    "oks": 0.973
+  },
+  {
+    "image": "train_19",
+    "oks": 0.927
+  },
+  {
+    "image": "train_19",
+    "oks": 0.786
+  },
+  {
+    "image": "train_20",
+    "oks": 0.948
+  }
+]

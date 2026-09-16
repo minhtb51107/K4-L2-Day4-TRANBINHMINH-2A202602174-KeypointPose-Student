@@ -72,7 +72,11 @@ Notebook Colab đã chạy xong trên GPU và kết quả được lưu trong `o
 Năm câu trả lời phân tích model chưa thể hoàn thành khi chưa có `outputs/eval_model.json` và ảnh dự đoán từ notebook.
 Notebook đã tạo `outputs/eval_model.json`. Pose mAP50-95 tăng nhẹ 0.0055 và precision tăng 0.0058, trong khi box mAP50-95 giảm 0.0078; điều này cho thấy 20 ảnh có cải thiện nhỏ ở keypoint nhưng chưa đủ dữ liệu để cải thiện ổn định khả năng phát hiện box.
 
-Ba câu hỏi cần ảnh prediction của Colab để kết luận cụ thể vẫn cần bổ sung: ảnh model đoán sai và loại lỗi, ảnh có OKS thấp nhất giữa model với nhãn, và so sánh ảnh nhãn tệ nhất với ảnh model tệ nhất. File JSON chỉ có số liệu tổng hợp, không chứa các ảnh hoặc danh sách lỗi theo ảnh.
+1. `pose_mAP50-95` tăng `0.0055` (từ `0.6853` lên `0.6908`). 20 ảnh giúp model cải thiện rất nhẹ việc đặt keypoint trong kiểu ảnh của bài, nhưng box mAP50-95 giảm `0.0078`, cho thấy dữ liệu ít chưa đủ để cải thiện ổn định phát hiện người.
+2. Chênh lệch box mAP50-95 và pose mAP50-95 là `0.1266` trước fine-tune và `0.1133` sau fine-tune. Model tìm người dễ hơn tìm chính xác từng khớp, đặc biệt ở ảnh có người nhỏ hoặc bị xe/vật thể che.
+3. Ở `outputs/model_predictions/test/test_02.jpg`, model tạo một phát hiện người điểm thấp `0.31` ở góc trái bên cạnh người thật điểm `0.90`. Đây là lỗi **nhầm người/false positive**, vì vùng đó không phải một người hoàn chỉnh; model vẫn vẽ keypoint lên vật thể hoặc hình dạng nền.
+4. OKS thấp nhất giữa model và nhãn của tôi là `train_10` với `0.718`. Đây là ảnh cần đối chiếu trực tiếp giữa prediction và `outputs/vis_train/train_10.jpg`; chỉ số thấp cho thấy model và nhãn bất đồng đáng kể, nhưng không đủ để kết luận bên nào đúng nếu không có Gold/quan sát ảnh gốc.
+5. Skeleton khớp Gold thấp nhất là ở `train_15.jpg` (`0.8678` trong lần ghép hiện hành), đồng thời model cũng có bất đồng ở ảnh này (`0.813` và lệch số người `model 2 / bạn 3`). Hai kết quả cùng chỉ ra `train_15` là ảnh khó vì nhiều người và phương tiện chồng lấn; lỗi có tính chất của ảnh khó hơn là bằng chứng riêng lẻ rằng toàn bộ guideline sai.
 
 ## 5. Một rule evidence bạn đã dùng
 
